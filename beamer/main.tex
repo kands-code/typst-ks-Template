@@ -1,0 +1,63 @@
+\documentclass{ksbeamer}
+
+\usepackage[base]{babel}
+\usepackage{lipsum}
+
+\title{Test Beamer}
+\author{Kevin Stephen \and Bing}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Contents}
+    \tableofcontents
+\end{frame}
+
+\section{One}
+
+\begin{frame}{one}
+    \lipsum[1][10]
+\end{frame}
+
+\section{Two}
+
+\begin{frame}{two}
+    \lipsum[1][10]
+\end{frame}
+
+\section{Three}
+
+\begin{frame}{three}
+    \lipsum[1][10]
+\end{frame}
+
+\section{Four}
+
+\begin{frame}[fragile]{four}
+    \begin{center}
+        \begin{minipage}{0.8\textwidth}
+            \begin{minted}[fontsize=\scriptsize]{rust}
+pub fn fib(n: usize) -> usize {
+    fn fib_cache(n: usize, a: usize, b: usize) -> usize {
+        match n {
+            0 => a,
+            1 => b,
+            _ => fib_cache(n - 1, b, a + b),
+        }
+    }
+    fib_cache(n, 0, 1)
+}
+            \end{minted}
+        \end{minipage}
+    \end{center}
+\end{frame}
+
+\section{Five}
+
+\begin{frame}{five}
+    \lipsum[1][10]
+\end{frame}
+
+\end{document}
