@@ -95,7 +95,7 @@
 %% set captions
 \RequirePackage{caption}
 %% underline
-\RequirePackage{ulem}
+\RequirePackage[normalem]{ulem}
 \RequirePackage{calc}
 %% biblatex
 \RequirePackage[
