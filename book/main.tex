@@ -9,27 +9,27 @@
 
 \begin{document}
 
-\frontmatter
-
 \input{cover.tex}
 \Cls
 
+\frontmatter
+
 \pagestyle{plain}
 \setcounter{page}{1}
-\pagenumbering{Roman}
-\tableofcontents
-\phantomsection
-\label{ch:contents}
-\addcontentsline{toc}{chapter}{Contents | 目录}
-\Cls
-
-\setcounter{page}{1}
 \pagenumbering{roman}
+
 \chapter*{Preface | 前言}
-\phantomsection
 \label{ch:preface}
 \addcontentsline{toc}{chapter}{Preface | 前言}
 \input{preface.tex}
+\Cls
+
+\setcounter{page}{1}
+\pagenumbering{Roman}
+
+\tableofcontents
+\addcontentsline{toc}{chapter}{Contents | 目录}
+\label{ch:contents}
 \Cls
 
 \mainmatter
@@ -37,8 +37,6 @@
 \pagestyle{fancy}
 \setcounter{page}{1}
 \pagenumbering{arabic}
-
-\part{Basic | 基础}
 
 \chapter{Beginner | 初学者}
 \label{ch:beginner}
@@ -51,13 +49,15 @@
 \setcounter{page}{1}
 \pagenumbering{Roman}
 
-\part*{End | 书末}
-\label{part:end}
-\addcontentsline{toc}{part}{End | 书末}
+\chapter*{Postscript | 后记}
+\label{ch:postscript}
+\addcontentsline{toc}{chapter}{Postscript | 后记}
+\input{postscript.tex}
+\Cls
 
 \listoffigures
-\phantomsection
 \label{ch:figures}
 \addcontentsline{toc}{chapter}{Figures | 图片清单}
+\Cls
 
 \end{document}
