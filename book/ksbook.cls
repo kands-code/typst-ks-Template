@@ -1,16 +1,16 @@
 % author: Kevin Stephen (kizunaaisesu@gmail.com)
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{kspaper}
-[2023/09/11 v0.3.2 Kevin Stephen's LaTeX template]
+\ProvidesClass{ksbook}
+[2023/09/11 v0.3.2 Kevin Stephen's book template]
 
 % based on article
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 %% reduce some unnecessary warnings
 \PassOptionsToPackage{quiet}{fontspec}
 \PassOptionsToPackage{quiet}{xeCJK}
 \ProcessOptions{\relax}
-%% load article class with basic settings
-\LoadClass[12pt,a4paper,twoside]{article}
+%% load book class with basic settings
+\LoadClass[12pt,a4paper,twoside]{book}
 %% must use LuaLaTeX
 \RequirePackage{iftex}
 \RequireLuaTeX
@@ -23,9 +23,9 @@
 \RequirePackage{cprotect}
 %% for some counters
 \RequirePackage{chngcntr}
-\counterwithin*{figure}{section}
-\counterwithin*{table}{section}
-\counterwithin*{equation}{section}
+\counterwithin*{figure}{chapter}
+\counterwithin*{table}{chapter}
+\counterwithin*{equation}{chapter}
 %% some special symbols
 %%% Optional: footnotes symbols
 % \RequirePackage[perpage,symbol*]{footmisc}
@@ -147,7 +147,7 @@
 \newcommand*{\kstex@cap@tablename}{表}
 \newcommand*{\kstex@cap@preface}{前\hspace{1em}言}
 \newcommand*{\kstex@cap@acknowledgementname}{致\hspace{1em}谢}
-\newcommand*{\kstex@cap@appendixname}{附录\hspace{0.5em}\chinese{\arabic{section}}}
+\newcommand*{\kstex@cap@appendixname}{附录\hspace{0.5em}\chinese{\arabic{chapter}}}
 \newcommand*{\kstex@cap@definition}{定义}
 \newcommand*{\kstex@cap@notation}{记号}
 \newcommand*{\kstex@cap@theorem}{定理}
@@ -220,28 +220,28 @@
 \renewcommand{\textsc}[1]{{\usefont{OT1}{cmr}{m}{sc}{#1}}}
 \newcommand{\dashnumber}[2]{{#1}\kern.07em\rule[.5ex]{.4em}{.15ex}\kern.07em{#2}}
 %% set some counter number
-\renewcommand*{\thefigure}{\dashnumber{\arabic{section}}{\arabic{figure}}}
-\renewcommand*{\thetable}{\dashnumber{\arabic{section}}{\arabic{table}}}
-\renewcommand*{\theequation}{\dashnumber{\arabic{section}}{\arabic{equation}}}
+\renewcommand*{\thefigure}{\dashnumber{\arabic{chapter}}{\arabic{figure}}}
+\renewcommand*{\thetable}{\dashnumber{\arabic{chapter}}{\arabic{table}}}
+\renewcommand*{\theequation}{\dashnumber{\arabic{chapter}}{\arabic{equation}}}
 
 % math environments
-\newtheorem{definition}{\kstex@cap@definition}[section]
+\newtheorem{definition}{\kstex@cap@definition}[chapter]
 \newtheorem{notation}[definition]{\kstex@cap@notation}
-\newtheorem{theorem}{\kstex@cap@theorem}[section]
+\newtheorem{theorem}{\kstex@cap@theorem}[chapter]
 \newtheorem{lemma}[theorem]{\kstex@cap@lemma}
 \newtheorem{corollary}[theorem]{\kstex@cap@corollary}
 \newtheorem{proposition}[theorem]{\kstex@cap@proposition}
 \newtheorem{fact}[theorem]{\kstex@cap@fact}
 \newtheorem{assumption}[theorem]{\kstex@cap@assumption}
 \newtheorem{conjecture}[theorem]{\kstex@cap@conjecture}
-\newtheorem{hypothesis}{\kstex@cap@hypothesis}[section]
-\newtheorem{axiom}{\kstex@cap@axiom}[section]
-\newtheorem{postulate}{\kstex@cap@postulate}[section]
-\newtheorem{principle}{\kstex@cap@principle}[section]
-\newtheorem{problem}{\kstex@cap@problem}[section]
-\newtheorem{exercise}{\kstex@cap@exercise}[section]
-\newtheorem{example}{\kstex@cap@example}[section]
-\newtheorem{remark}{\kstex@cap@remark}[section]
+\newtheorem{hypothesis}{\kstex@cap@hypothesis}[chapter]
+\newtheorem{axiom}{\kstex@cap@axiom}[chapter]
+\newtheorem{postulate}{\kstex@cap@postulate}[chapter]
+\newtheorem{principle}{\kstex@cap@principle}[chapter]
+\newtheorem{problem}{\kstex@cap@problem}[chapter]
+\newtheorem{exercise}{\kstex@cap@exercise}[chapter]
+\newtheorem{example}{\kstex@cap@example}[chapter]
+\newtheorem{remark}{\kstex@cap@remark}[chapter]
 \newenvironment{solution}[1][\kstex@cap@solution]{
     \par
     \normalfont
@@ -258,20 +258,20 @@
     \item[\hskip\labelsep\textbf{#1}\@addpunct{:}]\ignorespaces
 }{\popQED\endtrivlist\@endpefalse}
 %% algorithm seudocode
-\newtheorem{algorithm}{\kstex@cap@algorithm}[section]
+\newtheorem{algorithm}{\kstex@cap@algorithm}[chapter]
 \RequirePackage{algorithm}
 \RequirePackage{algorithmic}
 \renewcommand{\algorithmicrequire}{ \textbf{输入:}}
 \renewcommand{\algorithmicensure}{ \textbf{输出:}}
 \floatname{algorithm}{算法}
 %% numbering some environment
-\renewcommand*{\thedefinition}{\dashnumber{\arabic{section}}{\arabic{definition}}}
-\renewcommand*{\thetheorem}{\dashnumber{\arabic{section}}{\arabic{theorem}}}
-\renewcommand*{\theaxiom}{\dashnumber{\arabic{section}}{\arabic{axiom}}}
-\renewcommand*{\theproblem}{\dashnumber{\arabic{section}}{\arabic{problem}}}
-\renewcommand*{\theexercise}{\dashnumber{\arabic{section}}{\arabic{exercise}}}
-\renewcommand*{\theexample}{\dashnumber{\arabic{section}}{\arabic{example}}}
-\renewcommand*{\theremark}{\dashnumber{\arabic{section}}{\arabic{remark}}}
+\renewcommand*{\thedefinition}{\dashnumber{\arabic{chapter}}{\arabic{definition}}}
+\renewcommand*{\thetheorem}{\dashnumber{\arabic{chapter}}{\arabic{theorem}}}
+\renewcommand*{\theaxiom}{\dashnumber{\arabic{chapter}}{\arabic{axiom}}}
+\renewcommand*{\theproblem}{\dashnumber{\arabic{chapter}}{\arabic{problem}}}
+\renewcommand*{\theexercise}{\dashnumber{\arabic{chapter}}{\arabic{exercise}}}
+\renewcommand*{\theexample}{\dashnumber{\arabic{chapter}}{\arabic{example}}}
+\renewcommand*{\theremark}{\dashnumber{\arabic{chapter}}{\arabic{remark}}}
 
 % set floating environment
 \renewcommand*{\textfraction}{0.05}
@@ -292,38 +292,38 @@
 \renewcommand*{\tablename}{\kstex@cap@tablename}
 \renewcommand*{\appendixname}{\kstex@cap@appendixname}
 
-% article title
-\RequirePackage{titlesec}
-\renewcommand{\thesection}{第\arabic{section}章}
-\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
-%% title format
-\titleformat{\section}[hang]
-{\hei\zihao{-2}}
-{\thesection}
-{1ex}
-{\centering}
-\titleformat{\subsection}[hang]
-{\hei\zihao{-3}}
-{\thesubsection}
-{1ex}
-{}
-\titleformat{\subsubsection}[hang]
-{\hei\zihao{4}}
-{\thesubsubsection}
-{1ex}
-{}
-\titlecontents{section}[0pt]{\vspace{2mm}\hei\zihao{4}}
-{\thecontentslabel\hskip.5em}
-{}
-{\titlerule*[0.5pc]{.}\contentspage}
-\titlecontents{subsection}[30pt]{\hei\zihao{4}}
-{\thecontentslabel\hskip.5em}
-{}
-{\titlerule*[0.5pc]{.}\contentspage}
-\titlecontents{subsubsection}[55pt]{\hei\zihao{4}}
-{\thecontentslabel\hskip.5em}
-{}
-{\titlerule*[0.5pc]{.}\contentspage}
+% % book title
+% \RequirePackage{titlesec}
+% \renewcommand{\thesection}{第\arabic{chapter}章}
+% \renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}}
+% %% title format
+% \titleformat{\chapter}[hang]
+% {\hei\zihao{-2}}
+% {\thesection}
+% {1ex}
+% {\centering}
+% \titleformat{\subsection}[hang]
+% {\hei\zihao{-3}}
+% {\thesubsection}
+% {1ex}
+% {}
+% \titleformat{\subsubsection}[hang]
+% {\hei\zihao{4}}
+% {\thesubsubsection}
+% {1ex}
+% {}
+% \titlecontents{section}[0pt]{\vspace{2mm}\hei\zihao{4}}
+% {\thecontentslabel\hskip.5em}
+% {}
+% {\titlerule*[0.5pc]{.}\contentspage}
+% \titlecontents{subsection}[30pt]{\hei\zihao{4}}
+% {\thecontentslabel\hskip.5em}
+% {}
+% {\titlerule*[0.5pc]{.}\contentspage}
+% \titlecontents{subsubsection}[55pt]{\hei\zihao{4}}
+% {\thecontentslabel\hskip.5em}
+% {}
+% {\titlerule*[0.5pc]{.}\contentspage}
 
 % figure and table setting
 \DeclareCaptionFont{hei}{\hei}

@@ -50,7 +50,7 @@
 %% graphicx
 \RequirePackage{graphicx}
 \RequirePackage{float}
-\DeclareGraphicsExtensions{.pdf,.eps,.jpg,.png}
+\DeclareGraphicsExtensions{.svg,.pdf,.eps,.jpg,.png}
 \graphicspath{
     {figures/}
         {figure/}

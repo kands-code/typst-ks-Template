@@ -1,0 +1,63 @@
+\documentclass{ksbook}
+
+\title{Deno Learning Notes}
+\author{Kevin Stephen}
+\date{\today}
+
+\newcommand{\Deno}{\emph{Deno}}
+\newcommand{\TypeScript}{\emph{TypeScript}}
+
+\begin{document}
+
+\frontmatter
+
+\input{cover.tex}
+\Cls
+
+\pagestyle{plain}
+\setcounter{page}{1}
+\pagenumbering{Roman}
+\tableofcontents
+\phantomsection
+\label{ch:contents}
+\addcontentsline{toc}{chapter}{Contents | 目录}
+\Cls
+
+\setcounter{page}{1}
+\pagenumbering{roman}
+\chapter*{Preface | 前言}
+\phantomsection
+\label{ch:preface}
+\addcontentsline{toc}{chapter}{Preface | 前言}
+\input{preface.tex}
+\Cls
+
+\mainmatter
+
+\pagestyle{fancy}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\part{Basic | 基础}
+
+\chapter{Beginner | 初学者}
+\label{ch:beginner}
+\input{beginner/hello-world.tex}
+\Cls
+
+\backmatter
+
+\pagestyle{plain}
+\setcounter{page}{1}
+\pagenumbering{Roman}
+
+\part*{End | 书末}
+\label{part:end}
+\addcontentsline{toc}{part}{End | 书末}
+
+\listoffigures
+\phantomsection
+\label{ch:figures}
+\addcontentsline{toc}{chapter}{Figures | 图片清单}
+
+\end{document}
