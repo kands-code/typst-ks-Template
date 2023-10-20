@@ -176,15 +176,19 @@
 % set fonts
 \directlua{luaotfload.add_fallback(
     "emojifallback",
-    {"Segoe UI Emoji:mode=harf;"}
+    {"Apple Color Emoji:mode=harf;"}
     )}
-\newcommand*{\kstex@zhft@songti}{NSimSun}
+% \directlua{luaotfload.add_fallback(
+%     "emojifallback",
+%     {"Segoe UI Emoji:mode=harf;"}
+%     )}
+
+\newcommand*{\kstex@zhft@songti}{LXGW Neo ZhiSong Fusion}
 % \newcommand*{\kstex@zhft@songti}{SimSun}
-\newcommand*{\kstex@zhft@heiti}{Source Han Sans SC}
+\newcommand*{\kstex@zhft@heiti}{Hiragino Sans GB}
 % \newcommand*{\kstex@zhft@heiti}{SimHei}
 \newcommand*{\kstex@zhft@kaishu}{LXGW WenKai GB Fusion}
-% \newcommand*{\kstex@zhft@kaishu}{KaiTi}
-\newcommand*{\kstex@zhft@fangsong}{FangSong}
+\newcommand*{\kstex@zhft@fangsong}{Zhuque Fangsong (technical preview)}
 \newcommand*{\kstex@enft@main}{Times New Roman}
 \newcommand*{\kstex@enft@sans}{\kstex@zhft@heiti}
 \newcommand*{\kstex@enft@mono}{Cascadia Code PL}
@@ -206,7 +210,9 @@
 \setmainfont[RawFeature={fallback=emojifallback}]{\kstex@enft@main}
 \setsansfont[RawFeature={fallback=emojifallback},
     AutoFakeSlant]{\kstex@enft@sans}
-\setmonofont[RawFeature={fallback=emojifallback}]{\kstex@enft@mono}
+\setmonofont[RawFeature={fallback=emojifallback},
+    AutoFakeBold,
+    AutoFakeSlant]{\kstex@enft@mono}
 %% set some font shortcut
 \newcommand*{\songti}{\CJKfamily{song}}
 \newcommand*{\hei}{\CJKfamily{hei}}
