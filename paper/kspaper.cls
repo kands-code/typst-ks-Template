@@ -73,9 +73,13 @@
 \RequirePackage{nicematrix}
 \NiceMatrixOptions{cell-space-limits = 1pt}
 %% draw and codes
-\RequirePackage{pstricks}
 \RequirePackage{tikz}
-\usetikzlibrary{quotes}
+\usetikzlibrary{
+    quotes,
+    arrows.meta,
+    automata,
+    backgrounds,
+    er}
 \RequirePackage[
     langlinenos=true
 ]{minted}
@@ -100,11 +104,9 @@
 \AtBeginDocument{
     \hypersetup{
         pageanchor=true,
-        CJKbookmarks=true,
         bookmarksnumbered=true,
         bookmarksopen=true,
         bookmarksopenlevel=0,
-        breaklinks=true,
         plainpages=false,
         pdfborder=0 0 0,
     }

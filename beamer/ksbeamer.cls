@@ -78,7 +78,13 @@
 \RequirePackage{nicematrix}
 \NiceMatrixOptions{cell-space-limits = 1pt}
 %% draw and codes
-\RequirePackage{pstricks}
+\RequirePackage{tikz}
+\usetikzlibrary{
+    quotes,
+    arrows.meta,
+    automata,
+    backgrounds,
+    er}
 \RequirePackage[
     langlinenos=true
 ]{minted}
