@@ -6,7 +6,9 @@
 >
 > 在我的配置里有些系统外字体，下载链接如下
 >
-> - LXGW Neo ZhiSong Fusion：[https://github.com/lxgw/LxgwNeoZhiSong-Fusion](https://github.com/lxgw/LxgwNeoZhiSong-Fusion)
-> - LXGW WenKai GB Fusion：[https://github.com/lxgw/LxgwWenkaiGB-Fusion](https://github.com/lxgw/LxgwWenkaiGB-Fusion)
-> - Zhuque Fangsong (technical preview)：[https://github.com/TrionesType/zhuque](https://github.com/TrionesType/zhuque)
-> - Cascadia Code PL：[https://github.com/microsoft/cascadia-code](https://github.com/microsoft/cascadia-code)
+> - Source Han Serif SC (宋体)：[https://github.com/adobe-fonts/source-han-serif](https://github.com/adobe-fonts/source-han-serif)
+> - Source Han Sans SC (黑体)：[https://github.com/adobe-fonts/source-han-sans](https://github.com/adobe-fonts/source-han-sans)
+> - LXGW WenKai (楷体)：[https://github.com/lxgw/LxgwWenKai](https://github.com/lxgw/LxgwWenKai)
+> - Zhuque Fangsong (technical preview) (仿宋)：[https://github.com/TrionesType/zhuque](https://github.com/TrionesType/zhuque)
+> - Sarasa Mono Slab SC (等宽)：[https://github.com/be5invis/Sarasa-Gothic](https://github.com/be5invis/Sarasa-Gothic)
+> - Fira Code Retina (符号+等宽): [https://github.com/tonsky/FiraCode](https://github.com/tonsky/FiraCode/)

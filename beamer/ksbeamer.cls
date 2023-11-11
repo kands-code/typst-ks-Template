@@ -167,22 +167,24 @@
 % set fonts
 \directlua{luaotfload.add_fallback(
     "emojifallback",
-    {"Apple Color Emoji:mode=harf;"}
-    )}
+    {
+            "Fira Code Retina:mode=harf;"
+            ,"Apple Color Emoji:mode=harf;"
+        })}
 % \directlua{luaotfload.add_fallback(
 %     "emojifallback",
 %     {"Segoe UI Emoji:mode=harf;"}
 %     )}
 
-\newcommand*{\kstex@zhft@songti}{LXGW Neo ZhiSong Fusion}
+\newcommand*{\kstex@zhft@songti}{Source Han Serif SC}
 % \newcommand*{\kstex@zhft@songti}{SimSun}
-\newcommand*{\kstex@zhft@heiti}{Hiragino Sans GB}
+\newcommand*{\kstex@zhft@heiti}{Source Han Sans SC}
 % \newcommand*{\kstex@zhft@heiti}{SimHei}
-\newcommand*{\kstex@zhft@kaishu}{LXGW WenKai GB Fusion}
+\newcommand*{\kstex@zhft@kaishu}{LXGW WenKai}
 \newcommand*{\kstex@zhft@fangsong}{Zhuque Fangsong (technical preview)}
 \newcommand*{\kstex@enft@main}{Times New Roman}
 \newcommand*{\kstex@enft@sans}{\kstex@zhft@heiti}
-\newcommand*{\kstex@enft@mono}{Cascadia Code PL}
+\newcommand*{\kstex@enft@mono}{Sarasa Mono Slab SC}
 % \newcommand*{\kstex@enft@mono}{Consolas}
 %% for CJK
 \setCJKfamilyfont{song}[AutoFakeBold]{\kstex@zhft@songti}
@@ -196,7 +198,7 @@
     AutoFakeSlant]{\kstex@zhft@heiti}
 \setCJKmonofont[RawFeature={fallback=emojifallback},
     AutoFakeBold,
-    AutoFakeSlant]{LXGW WenKai Mono GB Fusion}
+    AutoFakeSlant]{\kstex@enft@mono}
 % \setCJKmonofont{\song}
 \setmainfont[RawFeature={fallback=emojifallback}]{\kstex@enft@main}
 \setsansfont[RawFeature={fallback=emojifallback},
