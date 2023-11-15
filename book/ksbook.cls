@@ -183,7 +183,7 @@
 \directlua{luaotfload.add_fallback(
   "emojifallback",
   {
-      "Fira Code Retina:mode=harf;"
+      "Sarasa Mono Slab SC:mode=harf;"
       ,"Apple Color Emoji:mode=harf;"
     })}
 % \directlua{luaotfload.add_fallback(
@@ -199,7 +199,7 @@
 \newcommand*{\kstex@zhft@fangsong}{Zhuque Fangsong (technical preview)}
 \newcommand*{\kstex@enft@main}{Times New Roman}
 \newcommand*{\kstex@enft@sans}{\kstex@zhft@heiti}
-\newcommand*{\kstex@enft@mono}{Sarasa Mono Slab SC}
+\newcommand*{\kstex@enft@mono}{Fira Code Retina}
 % \newcommand*{\kstex@enft@mono}{Consolas}
 %% for CJK
 \setCJKfamilyfont{song}[AutoFakeBold]{\kstex@zhft@songti}
