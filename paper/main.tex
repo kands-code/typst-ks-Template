@@ -122,7 +122,11 @@ I hope to come back to Tokyo someday, and explore more beauty.
 下面部分是我的一些代码测试，测试代码渲染效果：
 
 \begin{table}[H]
-    \begin{minted}{rust}
+    \begin{minted}[mathescape]{rust}
+// 代码解释
+// $fib(0) = 0$
+// $fib(1) = 1$
+// $fib(n) = fib(n - 1) + fib(n - 2)$
 pub fn fib(n: usize) -> usize {
     fn fib_cache(n: usize, a: usize, b: usize) -> usize {
         match n {

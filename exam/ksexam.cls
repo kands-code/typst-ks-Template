@@ -193,6 +193,7 @@
 % \newcommand*{\kstex@zhft@heiti}{SimHei}
 \newcommand*{\kstex@zhft@kaishu}{LXGW WenKai}
 \newcommand*{\kstex@zhft@fangsong}{Zhuque Fangsong (technical preview)}
+\newcommand*{\kstex@zhft@mono}{Sarasa Mono Slab SC}
 \newcommand*{\kstex@enft@main}{Times New Roman}
 \newcommand*{\kstex@enft@sans}{\kstex@zhft@heiti}
 \newcommand*{\kstex@enft@mono}{Fira Code Retina}
@@ -209,7 +210,7 @@
   AutoFakeSlant]{\kstex@zhft@heiti}
 \setCJKmonofont[RawFeature={fallback=emojifallback},
   AutoFakeBold,
-  AutoFakeSlant]{\kstex@enft@mono}
+  AutoFakeSlant]{\kstex@zhft@mono}
 % \setCJKmonofont{\song}
 \setmainfont[RawFeature={fallback=emojifallback}]{\kstex@enft@main}
 \setsansfont[RawFeature={fallback=emojifallback},

@@ -197,6 +197,7 @@
 % \newcommand*{\kstex@zhft@heiti}{SimHei}
 \newcommand*{\kstex@zhft@kaishu}{LXGW WenKai}
 \newcommand*{\kstex@zhft@fangsong}{Zhuque Fangsong (technical preview)}
+\newcommand*{\kstex@zhft@mono}{Sarasa Mono Slab SC}
 \newcommand*{\kstex@enft@main}{Times New Roman}
 \newcommand*{\kstex@enft@sans}{\kstex@zhft@heiti}
 \newcommand*{\kstex@enft@mono}{Fira Code Retina}
@@ -213,7 +214,7 @@
   AutoFakeSlant]{\kstex@zhft@heiti}
 \setCJKmonofont[RawFeature={fallback=emojifallback},
   AutoFakeBold,
-  AutoFakeSlant]{\kstex@enft@mono}
+  AutoFakeSlant]{\kstex@zhft@mono}
 % \setCJKmonofont{\song}
 \setmainfont[RawFeature={fallback=emojifallback}]{\kstex@enft@main}
 \setsansfont[RawFeature={fallback=emojifallback},
@@ -230,9 +231,9 @@
 \renewcommand{\textsc}[1]{{\usefont{OT1}{cmr}{m}{sc}{#1}}}
 \newcommand{\dashnumber}[2]{{#1}\kern.07em\rule[.5ex]{.4em}{.15ex}\kern.07em{#2}}
 %% set some counter number
-\renewcommand*{\thefigure}{\dashnumber{\arabic{chapter}}{\arabic{figure}}}
-\renewcommand*{\thetable}{\dashnumber{\arabic{chapter}}{\arabic{table}}}
-\renewcommand*{\theequation}{\dashnumber{\arabic{chapter}}{\arabic{equation}}}
+\renewcommand*{\thefigure}{\dashnumber{\arabic{section}}{\arabic{figure}}}
+\renewcommand*{\thetable}{\dashnumber{\arabic{section}}{\arabic{table}}}
+\renewcommand*{\theequation}{\dashnumber{\arabic{section}}{\arabic{equation}}}
 
 % math environments
 \newtheorem{definition}{\kstex@cap@definition}[chapter]
