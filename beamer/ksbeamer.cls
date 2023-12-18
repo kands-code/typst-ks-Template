@@ -11,10 +11,10 @@
 \ProcessOptions{\relax}
 %% load beamer class with basic settings
 \LoadClass[14pt,
-  xcolor=dvipsnames,
-  aspectratio=169,
-  noamsthm,
-  notheorems
+    xcolor=dvipsnames,
+    aspectratio=169,
+    noamsthm,
+    notheorems
 ]{beamer}
 \RequirePackage{pdfpages}
 %% must use LuaLaTeX
@@ -23,6 +23,7 @@
 
 % load some packages
 \RequirePackage[fontset=none]{ctex}
+\RequirePackage{zhnumber}
 %% beamer theme
 \RequirePackage{tikz}
 \usetikzlibrary{quotes}
@@ -32,14 +33,14 @@
 \RequirePackage{tikzlings}
 \usetheme[hideothersubsections]{Goettingen}
 \setbeamertemplate{sidebar canvas \beamer@sidebarside}{
-  \color{red!16}
-  \rule{\beamer@sidebarwidth}{\paperheight}
-  \vspace*{-0.6\paperheight}
-  \hspace*{-0.24\paperheight}
-  \begin{tikzpicture}
-    \pgfsetfillopacity{0.4}
-    \includegraphics[width=0.2\paperheight]{pics/icon.png}
-  \end{tikzpicture}
+    \color{red!16}
+    \rule{\beamer@sidebarwidth}{\paperheight}
+    \vspace*{-0.6\paperheight}
+    \hspace*{-0.24\paperheight}
+    \begin{tikzpicture}
+        \pgfsetfillopacity{0.4}
+        \includegraphics[width=0.2\paperheight]{pics/icon.png}
+    \end{tikzpicture}
 }
 %% set linespacing
 \renewcommand*{\baselinestretch}{1.38}
@@ -56,14 +57,14 @@
 \RequirePackage{float}
 \DeclareGraphicsExtensions{.svg,.pdf,.eps,.jpg,.png}
 \graphicspath{
-  {figures/}
-    {figure/}
-    {pictures/}
-    {picture/}
-    {pic/}
-    {pics/}
-    {image/}
-    {images/}
+    {figures/}
+        {figure/}
+        {pictures/}
+        {picture/}
+        {pic/}
+        {pics/}
+        {image/}
+        {images/}
 }
 %% tables
 \RequirePackage{array}
@@ -80,20 +81,20 @@
 %% draw and codes
 \RequirePackage{tikz}
 \usetikzlibrary{
-  quotes,
-  arrows.meta,
-  automata,
-  backgrounds,
-  er}
+    quotes,
+    arrows.meta,
+    automata,
+    backgrounds,
+    er}
 \RequirePackage[
-  langlinenos=true
+    langlinenos=true
 ]{minted}
 \usemintedstyle{sas}
 \setminted{
-  linenos=true,
-  mathescape=true,
-  python3=true,
-  fontsize=\small
+    linenos=true,
+    mathescape=true,
+    python3=true,
+    fontsize=\small
 }
 %% indent first line
 \RequirePackage{indentfirst}
@@ -105,18 +106,18 @@
 \RequirePackage{calc}
 %% biblatex
 \RequirePackage[
-  backend=biber,
-  %%% use gb7714-2015
-  style=gb7714-2015,
-  %%% or set `bibstyle' and `citestyle'
-  % citestyle=numeric-comp,
-  % bibstyle=phys,
-  sortlocale=zh_CN,
-  defernumbers=true,
-  natbib=true,
-  url=true,
-  doi=true,
-  eprint=true
+    backend=biber,
+    %%% use gb7714-2015
+    style=gb7714-2015,
+    %%% or set `bibstyle' and `citestyle'
+    % citestyle=numeric-comp,
+    % bibstyle=phys,
+    sortlocale=zh_CN,
+    defernumbers=true,
+    natbib=true,
+    url=true,
+    doi=true,
+    eprint=true
 ]{biblatex}
 %% utils
 
@@ -166,11 +167,11 @@
 
 % set fonts
 \directlua{luaotfload.add_fallback(
-  "emojifallback",
-  {
-      "Sarasa Mono Slab SC:mode=harf;"
-      ,"Apple Color Emoji:mode=harf;"
-    })}
+    "emojifallback",
+    {
+            "Sarasa Mono Slab SC:mode=harf;"
+            ,"Apple Color Emoji:mode=harf;"
+        })}
 % \directlua{luaotfload.add_fallback(
 %     "emojifallback",
 %     {"Segoe UI Emoji:mode=harf;"}
@@ -193,20 +194,20 @@
 \setCJKfamilyfont{kai}[AutoFakeBold]{\kstex@zhft@kaishu}
 \setCJKfamilyfont{fangsong}[AutoFakeBold]{\kstex@zhft@fangsong}
 \setCJKmainfont[RawFeature={fallback=emojifallback},
-  BoldFont={\kstex@zhft@heiti},
-  ItalicFont={\kstex@zhft@kaishu}]{\kstex@zhft@songti}
+    BoldFont={\kstex@zhft@heiti},
+    ItalicFont={\kstex@zhft@kaishu}]{\kstex@zhft@songti}
 \setCJKsansfont[RawFeature={fallback=emojifallback},
-  AutoFakeSlant]{\kstex@zhft@heiti}
+    AutoFakeSlant]{\kstex@zhft@heiti}
 \setCJKmonofont[RawFeature={fallback=emojifallback},
-  AutoFakeBold,
-  AutoFakeSlant]{\kstex@zhft@mono}
+    AutoFakeBold,
+    AutoFakeSlant]{\kstex@zhft@mono}
 % \setCJKmonofont{\song}
 \setmainfont[RawFeature={fallback=emojifallback}]{\kstex@enft@main}
 \setsansfont[RawFeature={fallback=emojifallback},
-  AutoFakeSlant]{\kstex@enft@sans}
+    AutoFakeSlant]{\kstex@enft@sans}
 \setmonofont[RawFeature={fallback=emojifallback},
-  AutoFakeBold,
-  AutoFakeSlant]{\kstex@enft@mono}
+    AutoFakeBold,
+    AutoFakeSlant]{\kstex@enft@mono}
 %% set some font shortcut
 \newcommand*{\songti}{\CJKfamily{song}}
 \newcommand*{\hei}{\CJKfamily{hei}}
@@ -239,19 +240,19 @@
 \newtheorem{example}{\kstex@cap@example}[section]
 \newtheorem{remark}{\kstex@cap@remark}[section]
 \newenvironment{solution}[1][\kstex@cap@solution]{
-  \par
-  \normalfont
-  \topsep6\p@\@plus6\p@\relax
-  \trivlist
-  \item[\hskip\labelsep\textbf{#1}\@addpunct{:}]\ignorespaces
+    \par
+    \normalfont
+    \topsep6\p@\@plus6\p@\relax
+    \trivlist
+    \item[\hskip\labelsep\textbf{#1}\@addpunct{:}]\ignorespaces
 }{\endtrivlist\@endpefalse}
 \renewenvironment{proof}[1][\kstex@cap@proof]{
-  \par
-  \pushQED{\qed}
-  \normalfont
-  \topsep6\p@\@plus6\p@\relax
-  \trivlist
-  \item[\hskip\labelsep\textbf{#1}\@addpunct{:}]\ignorespaces
+    \par
+    \pushQED{\qed}
+    \normalfont
+    \topsep6\p@\@plus6\p@\relax
+    \trivlist
+    \item[\hskip\labelsep\textbf{#1}\@addpunct{:}]\ignorespaces
 }{\popQED\endtrivlist\@endpefalse}
 %% algorithm seudocode
 \newtheorem{algorithm}{\kstex@cap@algorithm}[section]
@@ -293,48 +294,48 @@
 \DeclareCaptionFont{wuhao}{\zihao{5}}
 \DeclareCaptionFont{shiyi}{\normalsize}
 \captionsetup[figure]{
-  format=hang,
-  labelsep=quad,
-  font={hei,shiyi,bf},
-  position=bottom,
+    format=hang,
+    labelsep=quad,
+    font={hei,shiyi,bf},
+    position=bottom,
 }
 \captionsetup[table]{
-  format=hang,
-  labelsep=quad,
-  font={hei,wuhao,bf},
-  position=top,
+    format=hang,
+    labelsep=quad,
+    font={hei,wuhao,bf},
+    position=top,
 }
 \floatstyle{plaintop}
 \restylefloat{table}
 \let\convertergy@oldtabular\tabular
 \let\convertergy@endoldtabular\endtabular
 \renewenvironment{tabular}{
-  \bgroup
-  \renewcommand{\arraystretch}{1.2}
-  \convertergy@oldtabular
+    \bgroup
+    \renewcommand{\arraystretch}{1.2}
+    \convertergy@oldtabular
 }{
-  \convertergy@endoldtabular
-  \egroup
+    \convertergy@endoldtabular
+    \egroup
 }
 %% lists
 \setlist{
-  topsep=0.3em,
-  partopsep=0pt,
-  itemsep=0ex plus 0.1ex,
-  parsep=0pt,
-  leftmargin=1.5em,
-  rightmargin=0em,
-  labelsep=0.5em,
-  labelwidth=2em,
+    topsep=0.3em,
+    partopsep=0pt,
+    itemsep=0ex plus 0.1ex,
+    parsep=0pt,
+    leftmargin=1.5em,
+    rightmargin=0em,
+    labelsep=0.5em,
+    labelwidth=2em,
 }
 \setlist[itemize,1]{label=$\vcenter{\hbox{\large$\bullet$}}$}
 \setlist[itemize,2]{label=$\vcenter{\hbox{\small$\blacksquare$}}$}
 \setlist[itemize,3]{label=$\vcenter{\hbox{\small$\Diamondblack$}}$}
 \renewenvironment{quote}{
-  \list{}{\leftmargin=4em\rightmargin=4em}\item[]
+    \list{}{\leftmargin=4em\rightmargin=4em}\item[]
 }{\endlist}
 \renewenvironment{quotation}{
-  \list{}{\leftmargin=4em\rightmargin=4em}\item[]
+    \list{}{\leftmargin=4em\rightmargin=4em}\item[]
 }{\endlist}
 
 \endinput

@@ -18,6 +18,7 @@
 % load some packages
 %% for cjk input
 \RequirePackage[fontset=none]{ctex}
+\RequirePackage{zhnumber}
 %% for protecting verbatim contents
 \RequirePackage{verbdef}
 \RequirePackage{cprotect}
