@@ -35,7 +35,18 @@
 %% page style setting
 \RequirePackage[top=25mm,bottom=25mm,left=25mm,right=25mm]{geometry}
 \RequirePackage{pdfpages}
-\newcommand{\Cls}{\clearpage{\thispagestyle{empty}\cleardoublepage}}
+\newcommand{\cls}{\clearpage{\thispagestyle{empty}\cleardoublepage}}
+\newcommand{\say}[3][someone]
+{
+    \begin{flushright}
+        \begin{minipage}{#2\textwidth}
+            \large\textit{#3}
+            \begin{flushright}
+                --- \textbf{#1}
+            \end{flushright}
+        \end{minipage}
+    \end{flushright}
+}
 %% set linespacing
 \renewcommand*{\baselinestretch}{1.38}
 %% for math

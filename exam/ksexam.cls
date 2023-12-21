@@ -74,6 +74,44 @@
 %%% nice matrix
 \RequirePackage{nicematrix}
 \NiceMatrixOptions{cell-space-limits = 1pt}
+\newcommand{\say}[3][someone]
+{
+    \begin{flushright}
+        \begin{minipage}{#2\textwidth}
+            \large\textit{#3}
+            \begin{flushright}
+                --- \textbf{#1}
+            \end{flushright}
+        \end{minipage}
+    \end{flushright}
+}
+\newcommand*{\sect}[1]
+{
+    \stepcounter{section}
+    \fullwidth{
+        \smallskip\large\textbf{
+            \arabic{section}.\,#1
+        }
+    }
+}
+\newcommand{\head}[1]
+{
+    \begin{center}
+        \huge\textbf{
+            #1
+        }
+        \vspace*{0.8em}
+    \end{center}
+}
+\newcommand{\hfset}[4]
+{
+    \lhead{#1}
+    \chead{#2}
+    \rhead{#3}
+    \lfoot{}
+    \cfoot{#4}
+    \rfoot{}
+}
 %% draw and codes
 \RequirePackage{tikz}
 \usetikzlibrary{

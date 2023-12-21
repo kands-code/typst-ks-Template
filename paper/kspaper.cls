@@ -73,6 +73,17 @@
 %%% nice matrix
 \RequirePackage{nicematrix}
 \NiceMatrixOptions{cell-space-limits = 1pt}
+\newcommand{\say}[3][someone]
+{
+    \begin{flushright}
+        \begin{minipage}{#2\textwidth}
+            \large\textit{#3}
+            \begin{flushright}
+                --- \textbf{#1}
+            \end{flushright}
+        \end{minipage}
+    \end{flushright}
+}
 %% draw and codes
 \RequirePackage{tikz}
 \usetikzlibrary{
